@@ -10,8 +10,8 @@ global $mysqli;
     <li><a href="#!">three</a></li>
   </ul>
   <nav>
-    <div class="nav-wrapper blue darken-4">
-      <a href="#!" class="brand-logo"><img src="" alt=""></a>
+    <div class="nav-wrapper purple darken-4">
+      <a href="#!" class=""><img src="app/img/music.jpg" height="80px" width="300px" alt=""></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="badges.html"></a></li>
         <!-- Dropdown Trigger -->
@@ -95,7 +95,7 @@ global $mysqli;
       <div class="row">
       <h5 class="center-align">Lo más solicitado</h5>
       <?php 
-           $strsql= "SELECT `idprod`, `nombre_producto`, `idcategoria`, `descripcion`, `precio`, `url_imagen` FROM `productos` LIMIT 4,6";
+           $strsql= "SELECT `idprod`, `nombre_producto`, `idcategoria`, `descripcion`, `precio`, `url_imagen` FROM `productos` LIMIT 5,2";
            if($stmt = $mysqli->prepare($strsql)) {
             $stmt -> execute();
             $stmt-> store_result();

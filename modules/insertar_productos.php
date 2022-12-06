@@ -32,12 +32,12 @@ global $urlweb;
                 <label class="fw-bold">Cantidad:</label>
                 <input class="form-control" name="cantidad" type="text" class="validate">
             </div>
-            <button class="btn btn-success center" type="submit" name="agregar">Agregar Producto
-                <i class="bi bi-send-fill"></i>
+            <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="agregar">Agregar Producto
+            <i class="material-icons right">send</i>
             </button>
         </div>
     </form>
-    <div class="alert container col-md-6 col-md-offset-3">
+    <div class="container">
         <a class="btn btn-primary col-lg-9" href="?modulo=admin_productos"><i class="bi bi-arrow-left"></i> Volver atrás</a>
     </div>
 </div>
@@ -61,7 +61,7 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto agregado de forma existosa</h3>
+                <h3 class="center">Producto Agregado</h3>
                 <?php
                 mysqli_close($mysqli);
             } else {

@@ -7,7 +7,7 @@ global $urlweb;
 <h3 class="center"> Agregar Categorias </h3>
 
     <form class="" method="POST">
-        <div class="container row ">
+        <div class="">
             <div class="">
                 <label class="fw-bold">Id de la Categoria:</label>
                 <input class="form-control" name="idcategoria" type="text" class="validate">
@@ -25,14 +25,14 @@ global $urlweb;
                 <input class="form-control" name="url_imagen" type="text" class="validate">
             </div>
             
-            <button class="btn btn-success " type="submit" name="agregar">Agregar Categoria
-                <i class="bi bi-send-fill"></i>
+            <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="agregar">Agregar Categoria
+            <i class="material-icons right">send</i>
             
             </div>
         </div>
     </form>
-    <div class="container center">
-        <a class="btn" href="?modulo=admin_categorias"><i class="bi bi-arrow-left"></i> Regresar</a>
+    <div class="container right-align">
+        <a class="btn purple lighten-1" href="?modulo=admin_categorias"><i class=""></i> Regresar</a>
     </div>
 </div>
 
@@ -50,7 +50,7 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3 clas="center">Categoría agregada de froma exitosa</h3>
+                <h3 class="center">Categoría Agregada</h3>
                 <?php
                 mysqli_close($mysqli);
             } else {

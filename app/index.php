@@ -7,6 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="app/css/styles.css">
 </head>
 <body class="grey lighten-4">
     <nav>
@@ -30,7 +31,7 @@
      </div>
 
     <!--Footer-->
-    <footer class="page-footer grey darken-4">
+    <footer class="page-footer grey darken-4 foot">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">

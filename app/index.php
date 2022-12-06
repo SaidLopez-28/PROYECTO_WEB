@@ -12,9 +12,8 @@
     <nav>
         <div class="nav-wrapper grey darken-4">
           <ul id="nav-mobile" class="left hide-on-med-and-down">
-            <li><a href="">Bienvenido</a></li>
+            <li><a href="?modulo=inicio">Bienvenido</a></li>
             <li><a href="">Ofertas diarias</a></li>
-            <li><a href="">Foro académico</a></li>
             <li><a href="">Ayuda y contacto</a></li>
           </ul>
           <ul class="right hide-on-med-and-down">

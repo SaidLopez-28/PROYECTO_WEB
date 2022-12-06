@@ -17,10 +17,10 @@
     }
 ?>
 
- 
+    <div class="container">
     <div class="row">
     <div class="col l6 m6 s12">
-        <img src="<?php echo $url_imagen ?>" alt="">  
+        <img src="<?php echo $url_imagen ?>" class="circle" height="400px" alt="">  
     </div class="col l6 m6 s12">
         <h4><?php echo $nombre_producto	?></h4>
         Descripción del producto: <b><span><span><?php echo $descripcion ?></span></span></b>
@@ -28,4 +28,5 @@
         <h5>Precio: <b><?php echo $precio ?></b></h5>
         <a href="" class="red darken-3 btn"><i class="material-icons left">add_shopping_cart</i>AGREGAR AL CARRITO</a>
     </div>
+ </div>
  </div>

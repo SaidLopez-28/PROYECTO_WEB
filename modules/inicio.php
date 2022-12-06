@@ -11,12 +11,12 @@ global $mysqli;
   </ul>
   <nav>
     <div class="nav-wrapper blue darken-4">
-      <a href="#!" class="brand-logo"><img src="app/img/Logo-USAP-naranja-2.png" alt=""></a>
+      <a href="#!" class="brand-logo"><img src="" alt=""></a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="badges.html">Components</a></li>
+        <li><a href="badges.html"></a></li>
         <!-- Dropdown Trigger -->
-        <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Categorías<i class="material-icons right">arrow_drop_down</i></a></li>
-       <li><a href=""><span>Productos<i class=" material-icons right">store</i></span></a></li>
+        <li><a class="" href="?modulo=admin_categorias" data-target="dropdown1">Categorías<i class="material-icons right">arrow_drop_down</i></a></li>
+       <li><a href="?modulo=admin_productos"><span>Productos<i class=" material-icons right">store</i></span></a></li>
       </ul>
     </div>
   </nav>
@@ -28,28 +28,28 @@ global $mysqli;
           <li>
             <img src="https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg"> 
             <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h3>Fender</h3>
+              <h5 class="light grey-text text-lighten-3">Las mejores guitarras.</h5>
             </div>
           </li>
           <li>
             <img src="https://st.depositphotos.com/1605581/3032/i/450/depositphotos_30328185-stock-photo-abstract-blue-background-business-card.jpg"> <!-- random image -->
             <div class="caption left-align">
-              <h3>Left Aligned Caption</h3>
+              <h3>Saxofon</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
           </li>
           <li>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXpOnkZSGLznOuxAuqHWhZbec7FUzY119VHA&usqp=CAU"> <!-- random image -->
             <div class="caption right-align">
-              <h3>Right Aligned Caption</h3>
+              <h3>Bateria</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
           </li>
           <li>
             <img src="https://www.revistaneo.com/sites/default/files/2020-10/fondos-padres.jpg"> <!-- random image -->
             <div class="caption center-align">
-              <h3>This is our big Tagline!</h3>
+              <h3>Dj Components</h3>
               <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
             </div>
           </li>
@@ -70,9 +70,11 @@ global $mysqli;
               while($stmt->fetch()) {
                 ?>
                 <a href="?modulo=detalle_productos&idprod=<?php echo $idprod ?>">
+                <div class="container">
                 <div class="col s12 m7 l3">
                 <img src="<?php echo $url_imagen ?>" class="responsive-img" alt=""> <!--cambiar url por php --> 
                 <p class=""><?php echo $nombre_producto ?><br><?php echo "L ".number_format($precio,2) ?></p>
+                </div>
                 </div>
                 </a>
                 
@@ -91,7 +93,7 @@ global $mysqli;
       </div>
      <!--Bloque#2-->
       <div class="row">
-      <h5 class="center-align">Las mejores marcas</h5>
+      <h5 class="center-align">Lo más solicitado</h5>
       <?php 
            $strsql= "SELECT `idprod`, `nombre_producto`, `idcategoria`, `descripcion`, `precio`, `url_imagen` FROM `productos` LIMIT 4,6";
            if($stmt = $mysqli->prepare($strsql)) {
@@ -123,7 +125,7 @@ global $mysqli;
       </div>
       
       <div class="row">
-        <h5 class="center-align">Oferta Especial</h5>
+        <h5 class="center-align">Especial de Temporada</h5>
         <?php 
            $strsql= "SELECT `idprod`, `nombre_producto`, `idcategoria`, `descripcion`, `precio`, `url_imagen` FROM `productos` LIMIT 1";
            if($stmt = $mysqli->prepare($strsql)) {
@@ -134,7 +136,7 @@ global $mysqli;
               if($stmt->fetch()) {
                 ?>
                  <div class="col s12 m6 l12">
-                    <img src="<?php echo $url_imagen ?>" class="responsive-img" alt="">
+                    <img src="<?php echo $url_imagen ?>" class="circle" alt="">
                     <p class="center-align"><?php echo $nombre_producto ?><br><?php echo "L ".number_format($precio,2) ?></p>
                  </div>
         

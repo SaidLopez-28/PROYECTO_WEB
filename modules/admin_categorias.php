@@ -30,8 +30,8 @@
                                     <td ><?php echo $nombre_categoria ?></td>
                                     <td width="600px"><?php echo $descripcion ?></td>
                                     <td class="center"><img src="<?php echo $url_imagen ?>" width="100px" alt=""></td>
-                                    <td class="center"><a href="<?php $urlweb ?>?modulo=editar_categorias&idcategoria=<?php echo $idcategoria ?>" class="btn  ">Editar <i class="bi bi-pencil-square text-dark"></i></a></td>
-                                    <td class="center"><a class="btn btn-danger editbtn" href="javascript:eliminar(<?php echo $idcategoria ?>)">Eliminar <i class="bi bi-trash-fill"></i></a></td>
+                                    <td class="center"><a href="<?php $urlweb ?>?modulo=editar_categorias&idcategoria=<?php echo $idcategoria ?>" class="btn blue">Editar <i class="bi bi-pencil-square text-dark"></i></a></td>
+                                    <td class="center"><a class="btn red" href="javascript:eliminar(<?php echo $idcategoria ?>)">Eliminar <i class="bi bi-trash-fill"></i></a></td>
                                 </tr>
                             
 
@@ -51,7 +51,7 @@
         </tbody>
     </table>
     <div class="center">
-    <a  class="btn waves-light" href="<?php $urlweb ?>?modulo=insertar_categorias">Agregar Categorias</a>
+    <a  class="btn waves-light green" href="<?php $urlweb ?>?modulo=insertar_categorias">Agregar Categorias</a>
     </div>
     <script>
         function eliminar(idcategoria)

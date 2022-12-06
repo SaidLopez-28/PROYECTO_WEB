@@ -11,31 +11,31 @@ if($stmt = $mysqli->prepare($strsql)){
         $stmt->bind_result($idcategoria, $nombre_categoria, $descripcion, $url_imagen);
         $stmt->fetch();
         ?>
-        <div class="alert container col-md-6 col-md-offset-3 shadow-lg p-3 mb-5 bg-body rounded">
-        <h3 class="alert text-center fw-bold fst-italic"> Editar Categoría </h3>
+        <div class="container">
+        <h3 class="center"> Editar Categoría </h3>
             <form class="" method="POST">
                 <div class="row">
-                    <div class="mb-3">
-                        <label class="fw-bold">Nombre de la Categoría:</label>
+                    <div class="">
+                        <label class="">Nombre de la Categoría:</label>
                         <input class="form-control" name="nombre_categoria" type="text" class="validate" value="<?php echo $nombre_categoria ?>">
                     </div>
-                    <div class="mb-3">
-                        <label class="fw-bold">Descripcion de la Categoría:</label>
+                    <div class="">
+                        <label class="">Descripción de la Categoría:</label>
                         <textarea class="form-control" name="descripcion" type="text" class="validate"><?php echo $descripcion?></textarea>  
                     </div>
                 </div>
                 <div class="row">
-                <div class="mb-3">
-                        <label class="fw-bold">URL de Imagen:</label>
+                <div class="">
+                        <label class="">URL de Imagen:</label>
                         <input class="form-control" name="url_imagen" type="text" class="validate" value="<?php echo $url_imagen ?>">
                     </div>
-                    <button class="btn btn-success" type="submit" name="edit">Actualizar Datos 
-                        <i class="bi bi-cloud-upload"></i>
+                    <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="edit" class="validate">Actualizar Categorias
+                        <i class="material-icons right">send</i>
                     </button>
                 </div>
             </form>
-            <div class="alert container col-md-6 col-md-offset-3">
-                <a class="btn btn-primary col-lg-9" href="?modulo=admin_categoria"><i class="bi bi-arrow-left"></i> Volver atrás</a>
+            <div class="right-align">
+                <a class="btn purple lighten-1" href="?modulo=admin_categorias"><i class=""></i> Regresar</a>
             </div>
         </div>
         <?php
@@ -52,17 +52,17 @@ if($stmt = $mysqli->prepare($strsql)){
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto actualizado de Manera Exitosa</h3>
+                <h3 class="center-align">Categoria actualizada de forma exitosa</h3>
                 <?php
                 mysqli_close($mysqli);
             } else {
                 ?>
-                <h2>Error al actualizar el producto.</h2>
+                <h2>Error al actualizar la categoria</h2>
                 <?php
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <h3>Llenar todos los campos</h3>
             <?php
         }
     }

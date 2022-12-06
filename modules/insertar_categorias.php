@@ -8,25 +8,27 @@ global $urlweb;
 
     <form class="" method="POST">
         <div class="container row ">
-            <div class="mb-3">
+            <div class="">
                 <label class="fw-bold">Id de la Categoria:</label>
                 <input class="form-control" name="idcategoria" type="text" class="validate">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label class="fw-bold">Nombre de la Categoria:</label>
                 <input class="form-control" name="nombre_categoria" type="text" class="validate">
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label class="fw-bold">Descripción de la Categoria:</label>
                 <textarea  class="form-control" name="descripcion" type="text" class="validate"></textarea>
             </div>
-            <div class="mb-3">
+            <div class="">
                 <label class="fw-bold">URL de Imagen:</label>
                 <input class="form-control" name="url_imagen" type="text" class="validate">
             </div>
+            
             <button class="btn btn-success " type="submit" name="agregar">Agregar Categoria
                 <i class="bi bi-send-fill"></i>
-            </button>
+            
+            </div>
         </div>
     </form>
     <div class="container center">
@@ -48,17 +50,17 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3 clas="center">Categoria agregada de froma exitosa</h3>
+                <h3 clas="center">Categoría agregada de froma exitosa</h3>
                 <?php
                 mysqli_close($mysqli);
             } else {
                 ?>
-                <h2>Error al agregar el producto.</h2>
+                <h2>Error al agregar la categoria.</h2>
                 <?php
             }
         }else {
             ?>
-            <h3>Debe de llenar todos los campos</h3>
+            <h3>Llenar todos los campos</h3>
             <?php
         }
     }

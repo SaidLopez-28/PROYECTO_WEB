@@ -10,12 +10,12 @@
 
             if(isset($data)) 
             {
-                $strsql = "DELETE FROM productos WHERE  idprod= ?"; 
+                $strsql = "DELETE FROM categorias WHERE  idcategoria=?"; 
                 $stmt = $mysqli -> prepare($strsql); 
-                $stmt->bind_param("i",$data->idprod);
+                $stmt->bind_param("i",$data->idcategoria);
                 $stmt->execute();
                 if($stmt->errno == 0){
-                    $text = "El producto se elimino correctamente";
+                    $text = "La categoria se eliminó correctamente";
                 }
                 else 
                 {

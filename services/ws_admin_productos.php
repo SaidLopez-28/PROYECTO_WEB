@@ -24,12 +24,9 @@
             }   
             else{
                 $text = "No se recibieron los parametros"; 
-            }
-            break;
-        case "agregar": 
-            
+            }           
             break; 
-        case "editar": break; 
+            
         case "default": break; 
     }
 

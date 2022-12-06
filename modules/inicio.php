@@ -59,7 +59,7 @@ global $mysqli;
       <!--Bloque#1-->
     <div class="container center-align">
         <div class="row">
-          <h5 class="center-align"> <br> Tecnología para ti</h5>
+          <h5 class="center-align"> <br> Instrumentos para ti</h5>
           <?php 
            $strsql= "SELECT `idprod`, `nombre_producto`, `idcategoria`, `descripcion`, `precio`, `url_imagen` FROM `productos` LIMIT 4";
            if($stmt = $mysqli->prepare($strsql)) {
@@ -163,7 +163,7 @@ global $mysqli;
               $stmt->bind_result($idcategoria,$nombre_categoria,$url_imagen,$descripcion);
               while($stmt->fetch()) {
                 ?>
-                 <a href="?modulo=detalle_productos&idprod=<?php echo $idprod ?>">
+                 <a href="?modulo=detalle_categorias&idcategoria=<?php echo $idcategoria ?>">
                     <div class="col s12 m6 l3">
                       <img src="<?php echo $url_imagen ?>" class="responsive-img" alt="">
                     </div>     

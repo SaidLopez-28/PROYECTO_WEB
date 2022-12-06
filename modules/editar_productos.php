@@ -1,8 +1,8 @@
 <?php
 global $mysqli;
 global $urlweb;
-$idproducto = $_GET['idproducto'];
-$strsql = "SELECT productos.idproducto, productos.nombre_producto, categorias.idcategoria, productos.descripcion, productos.url_imagen, productos.precio, productos.cantidad FROM productos INNER JOIN categorias ON categorias.idcategoria=productos.idcategoria WHERE idproducto=?";
+$idproducto = $_GET['idprod'];
+$strsql = "SELECT productos.idprod, productos.nombre_producto, categorias.idcategoria, productos.descripcion, productos.url_imagen, productos.precio, productos.cantidad FROM productos INNER JOIN categorias ON categorias.idcategoria=productos.idcategoria WHERE idprod=?";
 if($stmt = $mysqli->prepare($strsql)){
     $stmt->bind_param ("i", $idproducto);
     $stmt->execute();
@@ -11,8 +11,8 @@ if($stmt = $mysqli->prepare($strsql)){
         $stmt->bind_result($idproducto, $nombre_producto, $categoria, $descripcion, $url_imagen, $precio, $cantidad);
         $stmt->fetch();
         ?>
-        <div class="alert container col-md-6 col-md-offset-3 shadow-lg p-3 mb-5 bg-body rounded">
-        <h3 class="alert text-center fw-bold fst-italic"> Editar Producto </h3>
+        <div class="container">
+        <h3 class="center"> Editar Productos </h3>
             <form class="" method="POST">
                 <div class="row">
                     <div class="mb-3">
@@ -41,13 +41,13 @@ if($stmt = $mysqli->prepare($strsql)){
                         <label class="fw-bold">Cantidad:</label>
                         <input class="form-control" name="cantidad" type="text" class="validate" value="<?php echo $cantidad ?>">
                     </div>
-                    <button class="btn btn-success" type="submit" name="edit">Actualizar Datos 
+                    <button class="btn btn-success" type="submit" name="edit">Actualizar Productos 
                         <i class="bi bi-cloud-upload"></i>
                     </button>
                 </div>
             </form>
-            <div class="alert container col-md-6 col-md-offset-3">
-                <a class="btn btn-primary col-lg-9" href="?modulo=admin_producto"><i class="bi bi-arrow-left"></i> Volver atrás</a>
+            <div class="container center">
+                <a class="btn" href="?modulo=admin_productos"><i class="bi bi-arrow-left"></i>Regresar</a>
             </div>
         </div>
         <?php

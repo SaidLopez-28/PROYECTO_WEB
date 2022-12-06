@@ -3,11 +3,11 @@ global $mysqli;
 global $urlweb;
 ?>
 
-<div class="alert container col-md-6 col-md-offset-3 shadow-lg p-3 mb-5 bg-body rounded ">
-<h3 class="alert text-center fw-bold fst-italic"> Crear Producto </h3>
+<div class="container">
+<h3 class="alert center fw-bold fst-italic"> Nuevo Producto </h3>
 
     <form class="" method="POST">
-        <div class="container row ">
+        <div class=" row ">
             <div class="mb-3">
                 <label class="fw-bold">Nombre del Producto:</label>
                 <input class="form-control" name="nombre_producto" type="text" class="validate">
@@ -32,13 +32,13 @@ global $urlweb;
                 <label class="fw-bold">Cantidad:</label>
                 <input class="form-control" name="cantidad" type="text" class="validate">
             </div>
-            <button class="btn btn-success " type="submit" name="agregar">Agregar Producto
+            <button class="btn btn-success center" type="submit" name="agregar">Agregar Producto
                 <i class="bi bi-send-fill"></i>
             </button>
         </div>
     </form>
     <div class="alert container col-md-6 col-md-offset-3">
-        <a class="btn btn-primary col-lg-9" href="?modulo=admin_producto"><i class="bi bi-arrow-left"></i> Volver atrás</a>
+        <a class="btn btn-primary col-lg-9" href="?modulo=admin_productos"><i class="bi bi-arrow-left"></i> Volver atrás</a>
     </div>
 </div>
 
@@ -61,7 +61,7 @@ global $urlweb;
             $resultado=mysqli_query($mysqli,$strsql);
             if ($resultado) {
             ?>
-                <h3>Producto agregado de Manera Exitosa</h3>
+                <h3>Producto agregado de forma existosa</h3>
                 <?php
                 mysqli_close($mysqli);
             } else {

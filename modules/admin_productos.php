@@ -34,8 +34,8 @@
                                     <td><img src="<?php echo $url_imagen ?>" weight="100px" height="100px" alt=""></td>
                                     <td><?php echo $precio ?></td>
                                     <td><?php echo $cantidad ?></td>
-                                    <td><a class="btn green" href="<?php $urlweb?>?modulo=editar_productos&idprod=<?php echo $idprod ?>">Editar</a></td>
-                                    <td><a class="btn blue" href="javascript:eliminar(<?php echo $idprod ?>)">Eliminar</a></td>
+                                    <td><a class="btn blue" href="<?php $urlweb?>?modulo=editar_productos&idprod=<?php echo $idprod ?>">Editar</a></td>
+                                    <td><a class="btn red" href="javascript:eliminar(<?php echo $idprod ?>)">Eliminar</a></td>
                              </tr>
 
                             <?php
@@ -54,7 +54,7 @@
         </tbody>
     </table>
     <div class="center">
-    <a  class="btn waves-light" href="<?php $urlweb ?>?modulo=insertar_productos">Agregar Productos</a>
+    <a  class="btn waves-light green" href="<?php $urlweb ?>?modulo=insertar_productos">Agregar Productos</a>
     </div>
     <script>
         function eliminar(idprod)

@@ -8,28 +8,28 @@ global $urlweb;
 
     <form class="" method="POST">
         <div class=" row ">
-            <div class="mb-3">
-                <label class="fw-bold">Nombre del Producto:</label>
+            <div class="">
+                <label class="">Nombre del Producto:</label>
                 <input class="form-control" name="nombre_producto" type="text" class="validate">
             </div>
-            <div class="mb-3">
-                <label class="fw-bold">Id Categoria:</label>
+            <div class="">
+                <label class="">Id Categoria:</label>
                 <input class="form-control" name="idcategoria" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label class="fw-bold">Descripcion del Producto:</label>
+                <label class="">Descripcion del Producto:</label>
                 <textarea  class="form-control" name="descripcion" type="text" class="validate"></textarea>
             </div>
             <div class="mb-3">
-                <label class="fw-bold">URL de Imagen:</label>
+                <label class="">URL de Imagen:</label>
                 <input class="form-control" name="url_imagen" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label class="fw-bold">Precio:</label>
+                <label class="">Precio:</label>
                 <input class="form-control" name="precio" type="text" class="validate">
             </div>
             <div class="mb-3">
-                <label class="fw-bold">Cantidad:</label>
+                <label class="">Cantidad:</label>
                 <input class="form-control" name="cantidad" type="text" class="validate">
             </div>
             <button class="btn waves-effect waves-light purple lighten-1" type="submit" name="agregar">Agregar Producto
@@ -37,8 +37,8 @@ global $urlweb;
             </button>
         </div>
     </form>
-    <div class="container">
-        <a class="btn btn-primary col-lg-9" href="?modulo=admin_productos"><i class="bi bi-arrow-left"></i> Volver atrás</a>
+    <div class=" right-align">
+        <a class="btn purple" href="?modulo=admin_productos"><i class="bi bi-arrow-left"></i> Volver atrás</a>
     </div>
 </div>
 

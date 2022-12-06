@@ -22,40 +22,42 @@ global $mysqli;
   </nav>
 </div>
       <!-- Slider -->
+      
       <div class="container">
       <div class="slider">
         <ul class="slides">
           <li>
-            <img src="https://images.pexels.com/photos/1287142/pexels-photo-1287142.jpeg?cs=srgb&dl=pexels-eberhard-grossgasteiger-1287142.jpg&fm=jpg"> 
+            <img height="100px" src="app/img/instrumentos.jpeg"> 
             <div class="caption center-align">
-              <h3>Fender</h3>
-              <h5 class="light grey-text text-lighten-3">Las mejores guitarras.</h5>
+              <h3></h3>
+              <h5 class="light grey-text text-lighten-3">.</h5>
             </div>
           </li>
           <li>
-            <img src="https://st.depositphotos.com/1605581/3032/i/450/depositphotos_30328185-stock-photo-abstract-blue-background-business-card.jpg"> <!-- random image -->
+            <img src="https://noticiasargentinas.com/media/k2/items/cache/ff9026b91fd20e1c9994473a591ccdaa_L.jpg?t=20211116_002758"> <!-- random image -->
             <div class="caption left-align">
-              <h3>Saxofon</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h3></h3>
+              <h5 class="light grey-text text-lighten-3"></h5>
             </div>
           </li>
           <li>
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXpOnkZSGLznOuxAuqHWhZbec7FUzY119VHA&usqp=CAU"> <!-- random image -->
+            <img src="https://www.bigbandmusica.es/images/2022/03/01/slide2.jpg"> <!-- random image -->
             <div class="caption right-align">
-              <h3>Bateria</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h3></h3>
+              <h5 class="light grey-text text-lighten-3"></h5>
             </div>
           </li>
           <li>
-            <img src="https://www.revistaneo.com/sites/default/files/2020-10/fondos-padres.jpg"> <!-- random image -->
+            <img src="https://img.freepik.com/fotos-premium/tablero-dj-controlador-musica-profesional-mezclar-musica-electronica-fiesta-club-nocturno_118086-3417.jpg?w=2000"> <!-- random image -->
             <div class="caption center-align">
-              <h3>Dj Components</h3>
-              <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+              <h3></h3>
+              <h5 class="light grey-text text-lighten-3"></h5>
             </div>
           </li>
         </ul>
       </div>
     </div>
+    
       <!--Bloque#1-->
     <div class="container center-align">
         <div class="row">
@@ -135,6 +137,7 @@ global $mysqli;
               $stmt->bind_result($idprod,$nombre_producto,$idcategoria,$descripcion,$precio,$url_imagen);
               if($stmt->fetch()) {
                 ?>
+                 <a href="?modulo=detalle_productos&idprod=<?php echo $idprod ?>">
                  <div class="col s12 m6 l12">
                     <img src="<?php echo $url_imagen ?>" class="circle" alt="">
                     <p class="center-align"><?php echo $nombre_producto ?><br><?php echo "L ".number_format($precio,2) ?></p>

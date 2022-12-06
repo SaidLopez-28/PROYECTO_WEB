@@ -74,12 +74,13 @@ global $mysqli;
                 <a href="?modulo=detalle_productos&idprod=<?php echo $idprod ?>">
                 <div class="container">
                 <div class="col s12 m7 l3">
+                <div class="card deep-purple darken-1 white-text">
                 <img src="<?php echo $url_imagen ?>" class="responsive-img" alt=""> <!--cambiar url por php --> 
                 <p class=""><?php echo $nombre_producto ?><br><?php echo "L ".number_format($precio,2) ?></p>
                 </div>
                 </div>
+                </div>
                 </a>
-                
 
                 <?php
               }       
@@ -106,9 +107,13 @@ global $mysqli;
               while($stmt->fetch()) {
                 ?>
                 <a href="?modulo=detalle_productos&idprod=<?php echo $idprod ?>">
+                <div class="container">
                 <div class="col s12 m3 l6">
-                  <img src="<?php echo $url_imagen ?>" class="" height="300px" weight="300px" alt="">
+                <div class="card deep-purple darken-1 white-text">
+                  <img src="<?php echo $url_imagen ?>" class="circle" height="300px" weight="300px" alt="">
                   <p><?php echo $nombre_producto ?><br><?php echo "L ".number_format($precio,2) ?></p>
+                </div>
+                </div>
                 </div>
                 </a>
         
@@ -138,11 +143,14 @@ global $mysqli;
               if($stmt->fetch()) {
                 ?>
                  <a href="?modulo=detalle_productos&idprod=<?php echo $idprod ?>">
+                 
                  <div class="col s12 m6 l12">
+                 <div class="card red darken-4 white-text">
                     <img src="<?php echo $url_imagen ?>" class="circle" alt="">
                     <p class="center-align"><?php echo $nombre_producto ?><br><?php echo "L ".number_format($precio,2) ?></p>
-                 </div>
-        
+                  </div>
+                </div>
+                
 
                 <?php
               }       
@@ -185,44 +193,3 @@ global $mysqli;
            }
           ?>
       </div>
-<!--
-     <div class="container">
-      <h5 class="center-align">Las mejores marcas</h5>
-      <div class="row center-align">
-        <div class="col m3 l6">
-      <img src="app/img/acer.webp" class="responsive-img" alt="">
-      <p>New Balance zx568 <br>$37.59</p>
-       </div>
-       <div class="col m3 l6">
-      <img src="app/img/dell.webp" class="responsive-img" alt="">
-      <p>$37.59</p>
-      <br>
-       </div>  -->   
-       <!--
-       <h5 class="center-align">Oferta Especial</h5>
-       <div class="col m6 l12">
-        <img src="app/img/offers.webp" class="responsive-img" alt="">
-        <p class="center-align">New Balance zx568 <br>$37.59</p>
-       </div> -->
-       <!--
-       <div class="row">
-       <h5 class="center-align">Compra por Categoría</h5>
-       <div class="col s12 m6 l3">
-        <img src="app/img/cels.webp" alt="">
-        <p>Celulares</p>
-       </div>
-       <div class="col s12 m6 l3">
-        <img src="app/img/pc.webp" alt="">
-        <p>Computadoras</p>
-       </div>
-       <div class="col s12 m6 l3">
-        <img src="app/img/apple.webp" alt="">
-        <p>Apple</p>
-       </div>
-       <div class="col s12 m6 l3">
-        <img src="app/img/canon.webp" alt="">
-        <p>Camáras</p>
-       </div>
-      </div>
-    </div>
-          -->
